@@ -97,7 +97,7 @@ function cashMachine(Valordesaque, salariofixo, tvendas) {
     }
     
 
-    return (`Valor do saque: ${Valordesaque}R$ Cedulas: ${saida.toString()} Saldo:${saldo}R$`)
+    return (`Valor do saque: ${Valordesaque-valor}R$ Cedulas: ${saida.toString()} Saldo:${saldo}R$`)
 }
 function calculateStock(Qatual,Qmax,Qmin){
     let qmedia= (Qmax+ Qmin/2)
