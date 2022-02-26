@@ -95,9 +95,10 @@ function cashMachine(Valordesaque, salariofixo, tvendas) {
     if(valor===1){
         console.log(` ${valor}R$ foi estornado.`)
     }
+    let valordesaquefim = (Valordesaque-valor)
     
 
-    return (`Valor do saque: ${Valordesaque-valor}R$ Cedulas: ${saida.toString()} Saldo:${saldo}R$`)
+    return (`Valor do saque: ${valordesaquefim}R$ Cedulas: ${saida.toString()} Saldo:${saldo}R$`)
 }
 function calculateStock(Qatual,Qmax,Qmin){
     let qmedia= (Qmax+ Qmin/2)
