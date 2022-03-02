@@ -130,17 +130,25 @@ function calculateAge(ano,mes,dia){
 function getDiagonal(valor1,valor2) {
     matrix = []
     result = 1
+    result2 = [1]
     let j = 0
     for(let i = 1;i<=(valor1*valor2);i++){
         
         matrix.push(i)
+        
+           
+        
+        
         if(j===(valor1+1)){
             result = (result*i) 
+            result2.push(i)
             j=0
         }
         j++
+        
     }
-    return (result)
+    return (result2)
 
 }
+console.log(getDiagonal(3,3))
 
