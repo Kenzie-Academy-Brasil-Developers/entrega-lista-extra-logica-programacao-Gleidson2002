@@ -128,17 +128,14 @@ function calculateAge(ano,mes,dia){
 
 }
 function getDiagonal(valor1,valor2) {
+    matrix1 = []
     matrix = []
     result = 1
     result2 = [1]
     let j = 0
+
     for(let i = 1;i<=(valor1*valor2);i++){
-        
-        matrix.push(i)
-        
-           
-        
-        
+        matrix1.push(i)
         if(j===(valor1+1)){
             result = (result*i) 
             result2.push(i)
@@ -147,7 +144,24 @@ function getDiagonal(valor1,valor2) {
         j++
         
     }
-    return (result2)
+    let counter = 0
+    for(let z=1;z<=valor2;z++){
+         if(matrix[z]===undefined){
+            matrix[z] = []
+        }
+        
+        for(let u=0;u<valor2;u++){
+               matrix[z].push(matrix1[counter])  
+            
+           
+           counter++
+        }
+    }
+    
+    
+    console.log(`A Diagonal de ${valor1}x${valor2} = `)
+    console.log(matrix)
+    return (`é ${result2}`)
 
 }
 console.log(getDiagonal(3,3))
