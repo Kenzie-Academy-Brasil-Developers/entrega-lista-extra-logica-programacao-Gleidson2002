@@ -165,7 +165,6 @@ function getDiagonalX(valor1,valor2) {
     return (`é ${result2}`)
 
 }
-console.log(getDiagonalX(8,8))
 
 
 function getDiagonal(arr){
