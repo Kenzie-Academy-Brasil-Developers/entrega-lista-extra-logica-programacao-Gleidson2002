@@ -127,7 +127,8 @@ function calculateAge(ano,mes,dia){
     return (`A idade da pessoa em ; Anos: ${Math.trunc(anos)} Meses:${Math.trunc(meses)} Dias: ${Math.trunc(dias)} Semanas: ${Math.trunc(semanas)}`)
 
 }
-function getDiagonal(valor1,valor2) {
+
+function getDiagonalX(valor1,valor2) {
     matrix1 = []
     matrix = []
     result = 1
@@ -164,5 +165,15 @@ function getDiagonal(valor1,valor2) {
     return (`é ${result2}`)
 
 }
-console.log(getDiagonal(3,3))
+console.log(getDiagonalX(8,8))
 
+
+function getDiagonal(arr){
+    let diagonal = [];
+    for(let i=0; i<arr.length; i++){
+        diagonal.push(arr[i][i])
+        
+    }
+    
+    return diagonal
+}
